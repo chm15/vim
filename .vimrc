@@ -1,3 +1,4 @@
+" REGULAR SETTINGS
 set autoindent
 filetype plugin indent on
 syntax on
@@ -14,6 +15,19 @@ set belloff=all
 set wildmenu        " cmd completion
 set noswapfile      " turn off swapfile
 
+
+" GVIM SPECIFIC
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
+
+" WINDOWS COMPATIBILITY
+set bs=2  "fixes broken backspace
+
+
+" AUTO RULER SWITCH
 set number relativenumber
 augroup numbertoggle
   autocmd!
@@ -26,6 +40,8 @@ highlight LineNr ctermfg=grey
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
+
+
 
 "set smartindent
 "set nocompatible
