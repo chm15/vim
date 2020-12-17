@@ -5,7 +5,7 @@ syntax on
 set ruler
 colorscheme slate
 set scrolloff=3 " keep three lines between the cursor and the edge of the screen
-set tabstop=8
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
