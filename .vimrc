@@ -17,10 +17,23 @@ set noswapfile      " turn off swapfile
 
 
 " GVIM SPECIFIC
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
+if has("gui_running")
+    " GVIM WINDOW RESIZE
+    set lines=999 columns=110
+
+    " Fonts
+    if has("win32") || has("win64")
+        " WINDOWS
+        set guifont=Consolas:h10
+        set encoding=utf-8 
+    endif
+
+    " Remove scrollbar and toolbar
+    "set guioptions-=m  "remove menu bar
+    set guioptions-=T  "remove toolbar
+    set guioptions-=r  "remove right-hand scroll bar
+    set guioptions-=L  "remove left-hand scroll bar
+endif
 
 
 " WINDOWS COMPATIBILITY
